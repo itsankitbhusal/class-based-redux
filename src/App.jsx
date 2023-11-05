@@ -1,7 +1,13 @@
+import Weather from "./components/Weather";
+import { Provider } from "react-redux";
+import store from "./store";
+
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <div className=" grid place-items-center min-h-screen">
+      <Provider store={store}>
+        <Weather />
+      </Provider>
+    </div>
+  );
 }
