@@ -13,10 +13,6 @@ class Weather extends Component {
     this.props.setCityName(e.target.value);
   };
 
-  handleLoadMore = () => {
-    // Handle load more logic if needed
-  };
-
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.fetchWeatherData(this.props.searchCity);
@@ -114,7 +110,7 @@ class Weather extends Component {
             </div>
           </div>
         ) : (
-          "some error occured"
+          "Loading..."
         )}
       </>
     );
